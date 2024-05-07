@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1419,8 +1419,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -638.9684, y: -305.8}
-  m_SizeDelta: {x: 42.497, y: 803.226}
+  m_AnchoredPosition: {x: -638.9684, y: -280.002}
+  m_SizeDelta: {x: 94.093, y: 803.227}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &227379542
 MonoBehaviour:
@@ -2512,7 +2512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &410087040
 Light:
   m_ObjectHideFlags: 0
@@ -2775,7 +2775,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 62fa68878f906ad4f81219c9f7e8d572, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c026cffd6588d5e40ae59a5541fa594d, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4757,8 +4757,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 947.18176, y: 315.1439}
-  m_SizeDelta: {x: 63.747, y: 346.713}
+  m_AnchoredPosition: {x: 877.33923, y: 315.1439}
+  m_SizeDelta: {x: 29.602, y: 346.713}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &848991452
 MonoBehaviour:
@@ -4780,7 +4780,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 69d6e2180a1a4964e800cd1cd44abb9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ebc205e639390d34c9ee6ecb8df55271, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10890,8 +10890,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -638.9684, y: -305.8}
-  m_SizeDelta: {x: 42.497, y: 803.226}
+  m_AnchoredPosition: {x: -638.9684, y: -283.40222}
+  m_SizeDelta: {x: 87.292, y: 803.227}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2124928889
 MonoBehaviour:
@@ -11165,7 +11165,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148217254477}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000029504295}
   m_LocalPosition: {x: 4.7509933, y: -0.121, z: 166.25198}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -11175,7 +11175,7 @@ Transform:
   - {fileID: 2975427003644373542}
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!4 &543450652795887710
 Transform:
   m_ObjectHideFlags: 0
@@ -11639,6 +11639,7 @@ MonoBehaviour:
   currentSlot: 1
   player: {fileID: 9092816771349968971}
   timer: 0
+  mySanityMeter: {fileID: 379657864}
   CinemachineCameraPrincipal: {fileID: 3288476757434390566}
   CinemachineCameraSecondary: {fileID: 6606745269771224130}
   CameraUI: {fileID: 358002816}

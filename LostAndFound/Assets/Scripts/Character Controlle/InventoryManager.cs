@@ -40,6 +40,8 @@ public class InventoryManager : MonoBehaviour
 
     public float timer;
 
+    [SerializeField] private SanityMeter mySanityMeter;
+
     private Animator myAnimator;
     [Header("CAMERA")]
     [SerializeField] private GameObject CinemachineCameraPrincipal;
@@ -133,13 +135,13 @@ public class InventoryManager : MonoBehaviour
             photoManager.numberPhoto = hit.transform.gameObject.GetComponent<PhotoScript>().ID;
             cardBoardManager.noteNumber = hit.transform.gameObject.GetComponent<PhotoScript>().ID;
             hit.transform.gameObject.GetComponent<PhotoScript>().photoCollider.enabled = false;
-            //hit.transform.gameObject.GetComponent<PhotoScript>().RestoreSanity();  esto no va jeje
+            mySanityMeter.RecoverSanity();
 
             if (myAnimator.GetBool("CameraMode"))
             {
                 cardBoardManager.spawnNote();
                 photoManager.Screenshot();
-
+                
             }
         }
         

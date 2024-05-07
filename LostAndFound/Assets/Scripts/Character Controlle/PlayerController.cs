@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject InteractableUI;
     private PlayerMovement playerMovement;
     [SerializeField] private Animator myAnimator;
+    
 
     [Header("CAR")]
     [SerializeField] private GameObject car;
