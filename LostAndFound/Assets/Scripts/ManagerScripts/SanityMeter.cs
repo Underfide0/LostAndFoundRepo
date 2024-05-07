@@ -28,24 +28,25 @@ public class SanityMeter : MonoBehaviour
     void Update()
     {
         
-        if (!playerController.isDriving || !playerController.isCopiling)
+        if (playerController.isDriving || playerController.isCopiling)
         {
-            timer -= Time.deltaTime;
-            SanityImage.fillAmount = timer / maxTime;
+            timer = timer;
 
         }
         else
         {
-            //timer = timer;
+           
+            timer -= Time.deltaTime;
+            SanityImage.fillAmount = timer / maxTime;
         }
 
-        RecoverSanity();
+        
 
        
     }
 
     public void RecoverSanity()
     {
-        timer += 20;   
+        timer += 50;   
     }
 }
