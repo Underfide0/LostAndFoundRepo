@@ -98,7 +98,7 @@ public class PhotoManager : MonoBehaviour
             }
         
 
-        if (photosTaken == 10)
+        if (photosTaken == materialToApply.Length)
         { 
             comeBackUI.SetActive(true);
         }
