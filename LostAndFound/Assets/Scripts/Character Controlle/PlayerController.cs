@@ -256,7 +256,7 @@ public class PlayerController : MonoBehaviour
             
         }
 
-        if (other.CompareTag("CarCoPilot"))
+        if (other.CompareTag("CarCoPilot")) 
         {
             copilot = true;
             

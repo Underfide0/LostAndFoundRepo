@@ -15,6 +15,7 @@ public class EnemyScript : MonoBehaviour
 
     private bool killing;
 
+
     private void Update()
     {
         if (!killing)
