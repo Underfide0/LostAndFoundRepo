@@ -40,8 +40,6 @@ public class SanityMeter : MonoBehaviour
             SanityImage.fillAmount = timer / maxTime;
         }
 
-        
-
        
     }
 

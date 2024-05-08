@@ -11418,9 +11418,10 @@ GameObject:
   - component: {fileID: 919132148217254480}
   - component: {fileID: 919132148217254479}
   - component: {fileID: 919132148217254478}
+  - component: {fileID: 919132148217254481}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11445,6 +11446,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
+  enemyAnimator: {fileID: 0}
 --- !u!195 &919132148217254479
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11488,6 +11490,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!136 &919132148217254481
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148217254477}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2.68
+  m_Direction: 1
+  m_Center: {x: -0.3, y: 1.28, z: 0}
 --- !u!1 &919132148859550436
 GameObject:
   m_ObjectHideFlags: 0
@@ -11818,6 +11843,7 @@ MonoBehaviour:
   cardboardUI: {fileID: 1020609982}
   closeButton: {fileID: 2021613540}
   optionsCanvas: {fileID: 1795523339}
+  enemyScript: {fileID: 919132148217254478}
 --- !u!1 &1249795213612862955
 GameObject:
   m_ObjectHideFlags: 0

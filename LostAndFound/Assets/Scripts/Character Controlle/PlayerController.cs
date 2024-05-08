@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using UnityEditor;
+using System.Security;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject InteractableUI;
     private PlayerMovement playerMovement;
     [SerializeField] private Animator myAnimator;
-    
+    private InventoryManager inventoryManager;
 
     [Header("CAR")]
     [SerializeField] private GameObject car;
@@ -40,6 +41,10 @@ public class PlayerController : MonoBehaviour
     private bool isPaused;
     [SerializeField] GameObject optionsCanvas;
 
+    [Header("Enemy")]
+    [SerializeField] private EnemyScript enemyScript;
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +56,8 @@ public class PlayerController : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
 
         playerInput.actions["Pause"].started += PauseMenuManager_started;
+
+       
     }
 
     private void PauseMenuManager_started(InputAction.CallbackContext obj)
@@ -73,28 +80,28 @@ public class PlayerController : MonoBehaviour
             if (isDriving&& pilot)
             {
                 exitCar();
-                Debug.Log("sale del coche");
+                
                 return;
 
             }
             if (!isDriving&& pilot)
             {
                 enterCar();
-                Debug.Log("entra al coche");
+               
                 return;
 
             }
             if (isCopiling&&copilot)
             {
                 exitCarCopilot();
-                Debug.Log("sale del coche");
+                
                 return;
 
             }
             if (!isCopiling && copilot)
             {
                 enterCarCopilot();
-                Debug.Log("entra al coche");
+                
                 return;
 
             }
@@ -118,6 +125,8 @@ public class PlayerController : MonoBehaviour
         car.GetComponent<CarController>();
 
         myAnimator = GetComponent<Animator>();
+
+        inventoryManager = GetComponent<InventoryManager>();
     }
 
     // Update is called once per frame
@@ -204,7 +213,7 @@ public class PlayerController : MonoBehaviour
             if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, maxDistance, carLayer))
             {
                 InteractableUI.SetActive(true);
-                Debug.Log("ActivoUI");
+               
 
             }
             else
@@ -218,7 +227,7 @@ public class PlayerController : MonoBehaviour
             if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, maxDistance, carLayer))
             {
                 InteractableUI.SetActive(true);
-                Debug.Log("ActivoUI");
+               
 
             }
             else
@@ -244,18 +253,23 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("CarPilot"))
         {
             pilot = true;
-            Debug.Log("Entrooo");
+            
         }
 
         if (other.CompareTag("CarCoPilot"))
         {
             copilot = true;
-            Debug.Log("Entrooo");
+            
         }
 
         if (other.CompareTag("Cardboard"))
         {
             insideCardboard = true;
+        }
+
+        if (other.CompareTag("Enemy"))
+        {
+            Death();
         }
     }
 
@@ -264,13 +278,13 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("CarPilot"))
         {
             InteractableUI.SetActive(false);
-            Debug.Log("Salgooo");
+            
             pilot = false;
         }
         if (other.CompareTag("CarCoPilot"))
         {
             InteractableUI.SetActive(false);    
-            Debug.Log("Salgooo");
+          
             copilot = false;
         }
 
@@ -300,7 +314,7 @@ public class PlayerController : MonoBehaviour
         Camera.GetComponent<FirstPersonCamera>().enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
-        Debug.Log("hOLA");
+        
     }
 
     public void Unpause()
@@ -315,12 +329,15 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
-    public void kk()
+    
+    public void Death()
     {
-        Debug.Log("KKKKKK");
+        enemyScript.killPlayer();
+        playerMovement.enabled = false;
+        Camera.GetComponent<FirstPersonCamera>().enabled = false;
+        inventoryManager.enabled = false;
     }
-
+  
 
 
 }

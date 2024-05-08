@@ -8,6 +8,7 @@ TagManager:
   - CarCoPilot
   - CarPilot
   - Cardboard
+  - Enemy
   layers:
   - Default
   - TransparentFX
