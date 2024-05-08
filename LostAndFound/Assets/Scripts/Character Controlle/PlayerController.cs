@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private PlayerMovement playerMovement;
     [SerializeField] private Animator myAnimator;
     private InventoryManager inventoryManager;
+    [SerializeField] private SanityMeter mySanityMeter;
+    public bool inCabin;
 
     [Header("CAR")]
     [SerializeField] private GameObject car;
@@ -146,6 +148,12 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = insideCarCopilot.position;
         }
+
+        if (mySanityMeter.crazyTime == true)
+        {
+            DeathbySanity();
+            Debug.Log("Muelto");
+        }
     }
 
     private void enterCar()
@@ -271,7 +279,11 @@ public class PlayerController : MonoBehaviour
 
         if (other.CompareTag("Enemy"))
         {
-            Death();
+            DeathbyKiller();
+        }
+        if (other.CompareTag("Cabin"))
+        {
+            inCabin = true;
         }
     }
 
@@ -294,6 +306,10 @@ public class PlayerController : MonoBehaviour
         {
             insideCardboard = false;
             InteractableUI.SetActive(false);
+        }
+        if (other.CompareTag("Cabin"))
+        {
+            inCabin = false;
         }
     }
 
@@ -331,7 +347,7 @@ public class PlayerController : MonoBehaviour
 
 
     
-    public void Death()
+    public void DeathbyKiller()
     {
         enemyScript.killPlayer();
         playerMovement.enabled = false;
@@ -343,9 +359,18 @@ public class PlayerController : MonoBehaviour
         Camera.transform.localRotation = Quaternion.Euler(73.43f, 60.823f, -278.812f);
         transform.position = new Vector3(0, 0, 0);
         normalUI.SetActive(false);
-
+        inventoryManager.deactivateAllGO();
     }
-  
 
+    public void DeathbySanity()
+    {
+        playerMovement.enabled = false;
+        Camera.GetComponent<FirstPersonCamera>().enabled = false;
+        inventoryManager.enabled = false;
+        Camera.GetComponent<FirstPersonCameraCar>().enabled = false;
+        normalUI.SetActive(false);
+        inventoryManager.deactivateAllGO();
+       // myAnimator.Play("CrazyDeath");
+    }
 
 }

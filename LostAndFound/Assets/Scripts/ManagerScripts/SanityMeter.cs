@@ -11,6 +11,7 @@ public class SanityMeter : MonoBehaviour
     private PlayerController playerController;
     public float timer;
     [SerializeField] private float maxTime;
+    public bool crazyTime;
 
     // Start is called before the first frame update
     void Start()
@@ -40,11 +41,34 @@ public class SanityMeter : MonoBehaviour
             SanityImage.fillAmount = timer / maxTime;
         }
 
-       
+        if (timer < maxTime && playerController.inCabin ){
+            StartCoroutine(RegenerateSanity());
+        }
+
+        crazyMoment();
     }
 
     public void RecoverSanity()
     {
         timer += 50;   
+    }
+
+    public IEnumerator RegenerateSanity()
+    {
+        float incrementAmount = 0.5f;
+        while (timer < maxTime)
+        {
+            timer += incrementAmount * Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    public void crazyMoment()
+    {
+        if (timer <= 0)
+        {
+            crazyTime = true;
+            Debug.Log("locoooo");
+        }
     }
 }

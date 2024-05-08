@@ -9,6 +9,7 @@ TagManager:
   - CarPilot
   - Cardboard
   - Enemy
+  - Cabin
   layers:
   - Default
   - TransparentFX

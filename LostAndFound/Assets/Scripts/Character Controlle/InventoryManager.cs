@@ -400,5 +400,26 @@ public class InventoryManager : MonoBehaviour
             flashlightOn = false;
             
     }
+
+    public void deactivateAllGO()
+    {
+        Inventory firstSlot = inventories[0];
+
+        Inventory secondSlot = inventories[1];
+
+        Inventory thirdSlot = inventories[2];
+
+        GameObject Object1 = firstSlot.objectInGame;
+
+        GameObject Object2 = secondSlot.objectInGame;
+
+        GameObject Object3 = thirdSlot.objectInGame;
+
+        Object1.SetActive(false);
+
+        Object2.SetActive(false);
+
+        Object3.SetActive(false);
+    }
     
 }
