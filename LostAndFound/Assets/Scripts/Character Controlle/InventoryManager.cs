@@ -27,8 +27,8 @@ public class InventoryManager : MonoBehaviour
     }
     [Header("INVENTORY")]
     [SerializeField] private Inventory[] inventories;
-    
-    
+
+    [SerializeField] private GameObject notePad;
 
     public int currentSlot;
 
@@ -235,6 +235,7 @@ public class InventoryManager : MonoBehaviour
 
         CameraDesactivation();
 
+        notePad.SetActive(false);
 
     }
 
@@ -274,7 +275,7 @@ public class InventoryManager : MonoBehaviour
 
         timer = 0;
 
-        
+        notePad.SetActive(false);
 
         FlashLightOff();
     }
@@ -320,8 +321,53 @@ public class InventoryManager : MonoBehaviour
         CameraDesactivation();
 
         FlashLightOff();
+
+        notePad.SetActive(false);
     }
-    
+    public void OptionsF()
+    {
+
+
+        Inventory firstSlot = inventories[0];
+
+        Inventory secondSlot = inventories[1];
+
+        Inventory thirdSlot = inventories[2];
+
+        GameObject Object1 = firstSlot.objectInGame;
+
+        GameObject Object2 = secondSlot.objectInGame;
+
+        GameObject Object3 = thirdSlot.objectInGame;
+
+        Object1.SetActive(false);
+
+        Object2.SetActive(false);
+
+        Object3.SetActive(false);
+
+        Image Slot1 = firstSlot.slot;
+
+        Image Slot2 = secondSlot.slot;
+
+        Image Slot3 = thirdSlot.slot;
+
+        Slot1.color = Color.black;
+
+        Slot2.color = Color.black;
+
+        Slot3.color = Color.black;
+
+        timer = 0;
+
+        Debug.Log("Options");
+
+        CameraDesactivation();
+
+        FlashLightOff();
+
+        notePad.SetActive(true);
+    }
 
     public void CameraActivation()
     {
@@ -335,7 +381,7 @@ public class InventoryManager : MonoBehaviour
         CinemachineCameraPrincipal.SetActive(true);
         CinemachineCameraSecondary.SetActive(false);
         CameraUI.SetActive(false);
-        Debug.Log("mODOnORMAL");
+        
     }
     public void FlashLightOn()
     {
@@ -343,7 +389,7 @@ public class InventoryManager : MonoBehaviour
         {
             FlashLightGO.SetActive(true);
             flashlightOn = true;
-            Debug.Log("LuzEncendida");
+            
         }
     }
 
@@ -352,7 +398,7 @@ public class InventoryManager : MonoBehaviour
         
             FlashLightGO.SetActive(false);
             flashlightOn = false;
-            Debug.Log("luz apagada");
+            
     }
     
 }

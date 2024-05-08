@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -47,6 +48,7 @@ public class EnemyScript : MonoBehaviour
         killing = true;
         enemyAnimator.Play("metarig|Kill_Animation");
         agent.SetDestination(transform.position);
-        transform.eulerAngles = new Vector3 (0, 0, 0);
+        //transform.eulerAngles = new Vector3 (0, 0, 0);
+        transform.localRotation = Quaternion.Euler(0, player.transform.eulerAngles.y, 0);
     }
 }

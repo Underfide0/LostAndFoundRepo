@@ -39,11 +39,13 @@ public class PlayerController : MonoBehaviour
 
     [Header("OptionsMenu")]
     private bool isPaused;
-    [SerializeField] GameObject optionsCanvas;
+    
+    [SerializeField] GameObject firstOption;
 
     [Header("Enemy")]
     [SerializeField] private EnemyScript enemyScript;
-    
+    [SerializeField] private GameObject enemyHand;
+    [SerializeField] private GameObject normalUI;
 
 
     // Start is called before the first frame update
@@ -310,18 +312,17 @@ public class PlayerController : MonoBehaviour
     {
         isPaused = true;
         Time.timeScale = 0f;
-        optionsCanvas.SetActive(true);
         Camera.GetComponent<FirstPersonCamera>().enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
-        
-    }
+        EventSystem.current.SetSelectedGameObject(firstOption);
 
+    }
+   
     public void Unpause()
     {
         isPaused = false;
         Time.timeScale = 1f;
-        optionsCanvas.SetActive(false);
         myAnimator.SetBool("isPaused", false);
         Camera.GetComponent<FirstPersonCamera>().enabled = true;
         Cursor.visible = false;
@@ -336,6 +337,13 @@ public class PlayerController : MonoBehaviour
         playerMovement.enabled = false;
         Camera.GetComponent<FirstPersonCamera>().enabled = false;
         inventoryManager.enabled = false;
+        Camera.GetComponent<FirstPersonCameraCar>().enabled = false;
+        Camera.transform.parent = enemyHand.transform;
+        Camera.transform.localPosition = new Vector3(0, 0.00619f, 0.00111f);
+        Camera.transform.localRotation = Quaternion.Euler(73.43f, 60.823f, -278.812f);
+        transform.position = new Vector3(0, 0, 0);
+        normalUI.SetActive(false);
+
     }
   
 

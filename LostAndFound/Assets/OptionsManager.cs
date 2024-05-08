@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class OptionsManager : MonoBehaviour
 {
@@ -35,6 +37,11 @@ public class OptionsManager : MonoBehaviour
     public void brightnessAmount()
     {
         Screen.brightness = brightnessSlider.value;
+    }
+    
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void resolutionDropdown(int index)
