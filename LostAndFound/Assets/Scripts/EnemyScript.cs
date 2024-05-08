@@ -33,6 +33,8 @@ public class EnemyScript : MonoBehaviour
     {
         killing = false;
         
+
+
     }
     private void ChasePlayer()
     {
@@ -44,5 +46,6 @@ public class EnemyScript : MonoBehaviour
         killing = true;
         enemyAnimator.Play("metarig|Kill_Animation");
         agent.SetDestination(transform.position);
+        transform.eulerAngles = new Vector3 (0, 0, 0);
     }
 }
