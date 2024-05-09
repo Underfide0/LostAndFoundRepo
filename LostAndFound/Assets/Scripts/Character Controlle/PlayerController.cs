@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private EnemyScript enemyScript;
     [SerializeField] private GameObject enemyHand;
     [SerializeField] private GameObject normalUI;
-    
+    [SerializeField] private GameObject vallaEndGame;
 
 
     // Start is called before the first frame update
@@ -290,6 +290,7 @@ public class PlayerController : MonoBehaviour
             if (photoManager.photosTaken == 8)
             {
                 enemyScript.enemyTP();
+                vallaEndGame.SetActive(false);
             }
         }
     }
@@ -379,10 +380,5 @@ public class PlayerController : MonoBehaviour
         normalUI.SetActive(false);
         inventoryManager.deactivateAllGO();
        // myAnimator.Play("CrazyDeath");
-    }
-
-    public void enemyInCabin()
-    {
-
     }
 }

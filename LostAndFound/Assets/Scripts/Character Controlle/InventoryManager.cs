@@ -38,6 +38,8 @@ public class InventoryManager : MonoBehaviour
 
     private PlayerController playerController;
 
+    private float InventoryInput;
+
     public float timer;
 
     [SerializeField] private SanityMeter mySanityMeter;
@@ -64,7 +66,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject FlashLightGO;
     private float inventoryInputs()
     {
-        float InventoryInput = playerInput.actions["Inventory"].ReadValue<float>();
+        InventoryInput = playerInput.actions["Inventory"].ReadValue<float>();
         
         return InventoryInput;
 
@@ -159,22 +161,23 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
 
-       //Debug.Log(Inputs());  Mira a ver que le pasa al mando para pasar de slot
+
+        Debug.Log(InventoryInput);
         myAnimator.SetInteger("Slot", currentSlot);
                                          
         timer = timer +Time.deltaTime;
-        if (timer > 0.3f)
+        if (timer > 0.1f)
         {
             if (inventoryInputs() == 0) return;
 
-            if (inventoryInputs() > 0.1)
+            if (inventoryInputs() == 1)
             {
                 Debug.Log("mas slot");
                 currentSlot++;
+                InventoryInput = 0;
             }
-            if (inventoryInputs() < -0.1)
+            if (inventoryInputs() == -1)
             {
                 currentSlot--;
                 Debug.Log("menos slot");
@@ -190,6 +193,8 @@ public class InventoryManager : MonoBehaviour
                 currentSlot = 3;
             }
         }
+
+        InventoryInput = 0;
     }
 
  

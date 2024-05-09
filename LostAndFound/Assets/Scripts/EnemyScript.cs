@@ -22,6 +22,8 @@ public class EnemyScript : MonoBehaviour
 
     [SerializeField] private GameObject EscapeUI;
 
+    public bool enemyInCabin;
+
 
     private void Update()
     {
@@ -39,6 +41,7 @@ public class EnemyScript : MonoBehaviour
     }
     private void Start()
     {
+        enemyInCabin = false;
         killing = false;
     }
 
@@ -50,9 +53,17 @@ public class EnemyScript : MonoBehaviour
     
     public void enemyTP()
     {
-        transform.position = cabinTransform.position;
-        comebackUI.SetActive(false);
-        EscapeUI.SetActive(true);
+        transform.position = cabinTransform.position;  
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Cabin"))
+        {
+            enemyInCabin = true;
+            comebackUI.SetActive(false);
+            EscapeUI.SetActive(true);   
+        }
     }
 
     public void killPlayer()
@@ -60,7 +71,7 @@ public class EnemyScript : MonoBehaviour
         killing = true;
         enemyAnimator.Play("metarig|Kill_Animation");
         agent.SetDestination(transform.position);
-        //transform.eulerAngles = new Vector3 (0, 0, 0);
+        
         transform.localRotation = Quaternion.Euler(0, player.transform.eulerAngles.y, 0);
     }
 }
