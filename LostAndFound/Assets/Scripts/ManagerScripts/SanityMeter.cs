@@ -50,7 +50,11 @@ public class SanityMeter : MonoBehaviour
 
     public void RecoverSanity()
     {
-        timer += 50;   
+        timer += 50;  
+        if (timer > maxTime)
+        {
+             timer = 300;
+        }
     }
 
     public IEnumerator RegenerateSanity()

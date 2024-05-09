@@ -60,6 +60,8 @@ public class InventoryManager : MonoBehaviour
 
     [SerializeField] private CardBoardManager cardBoardManager;
 
+    [SerializeField] private Animator photoTakenAnimator;
+
     [SerializeField] private LayerMask photoLayerMask;
     [Header("---FlashLight---")]
     public bool flashlightOn;
@@ -84,7 +86,19 @@ public class InventoryManager : MonoBehaviour
 
         playerInput.actions["Lights"].started += InventoryManager_FlashLightOn;
 
-        
+        playerInput.actions["InventoryController+"].started += InventoryManager_InventoryPositive;
+
+        playerInput.actions["InventoryController-"].started += InventoryManager_InventoryNegative;
+    }
+
+    private void InventoryManager_InventoryNegative(InputAction.CallbackContext obj)
+    {
+        currentSlot--;
+    }
+
+    private void InventoryManager_InventoryPositive(InputAction.CallbackContext obj)
+    {
+        currentSlot++;
     }
 
     private void InventoryManager_FlashLightOn(InputAction.CallbackContext obj)
@@ -143,7 +157,8 @@ public class InventoryManager : MonoBehaviour
             {
                 cardBoardManager.spawnNote();
                 photoManager.Screenshot();
-                
+                myAnimator.SetBool("CameraMode", false);
+                photoTakenAnimator.Play("photoTaken");
             }
         }
         
@@ -163,7 +178,7 @@ public class InventoryManager : MonoBehaviour
     {
 
 
-        Debug.Log(InventoryInput);
+        //Debug.Log(InventoryInput);
         myAnimator.SetInteger("Slot", currentSlot);
                                          
         timer = timer +Time.deltaTime;
@@ -171,13 +186,13 @@ public class InventoryManager : MonoBehaviour
         {
             if (inventoryInputs() == 0) return;
 
-            if (inventoryInputs() == 1)
+            if (inventoryInputs() >= 0.1)
             {
                 Debug.Log("mas slot");
                 currentSlot++;
                 InventoryInput = 0;
             }
-            if (inventoryInputs() == -1)
+            if (inventoryInputs() <= -0.1)
             {
                 currentSlot--;
                 Debug.Log("menos slot");

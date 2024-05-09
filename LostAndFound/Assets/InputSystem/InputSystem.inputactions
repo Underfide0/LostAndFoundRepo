@@ -52,9 +52,9 @@
                 },
                 {
                     "name": "Inventory",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "21f29cd6-2154-4614-924b-6c4973888791",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -108,6 +108,24 @@
                     "name": "Pause",
                     "type": "Button",
                     "id": "24f1c230-c6e4-4950-97d6-ad4ccc87a1dc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "InventoryController+",
+                    "type": "Button",
+                    "id": "e03651d3-0880-4046-b638-78f812ff2b03",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "InventoryController-",
+                    "type": "Button",
+                    "id": "3b2a2957-ad97-492f-b016-3bc1cff06bac",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -347,39 +365,6 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Controller",
-                    "id": "7658cf9a-1ad6-4a7a-af28-d8c6b5b10353",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Inventory",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "Negative",
-                    "id": "63b36505-1303-433c-91b3-e8cf635eaf6b",
-                    "path": "<Gamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Inventory",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Positive",
-                    "id": "59494595-8216-4667-a9be-a33f10eaef5d",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Inventory",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "Mouse",
                     "id": "c3f82474-4dba-4f3b-b0fc-a8078730137c",
                     "path": "1DAxis",
@@ -541,6 +526,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f3077928-a949-4e61-b786-6d3cdc76e211",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InventoryController+",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a3d6fbb-ccc3-4442-8408-76bf27d2947c",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InventoryController-",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
