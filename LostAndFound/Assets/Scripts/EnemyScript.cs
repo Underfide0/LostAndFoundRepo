@@ -16,6 +16,12 @@ public class EnemyScript : MonoBehaviour
 
     private bool killing;
 
+    [SerializeField] private Transform cabinTransform;
+
+    [SerializeField] private GameObject comebackUI;
+
+    [SerializeField] private GameObject EscapeUI;
+
 
     private void Update()
     {
@@ -34,13 +40,19 @@ public class EnemyScript : MonoBehaviour
     private void Start()
     {
         killing = false;
-        
-
-
     }
+
+    
     private void ChasePlayer()
     {
         agent.SetDestination(player.position);
+    }
+    
+    public void enemyTP()
+    {
+        transform.position = cabinTransform.position;
+        comebackUI.SetActive(false);
+        EscapeUI.SetActive(true);
     }
 
     public void killPlayer()

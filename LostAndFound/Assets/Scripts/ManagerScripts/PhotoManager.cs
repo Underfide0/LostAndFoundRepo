@@ -9,7 +9,7 @@ public class PhotoManager : MonoBehaviour
 
     public int numberPhoto;
 
-    [SerializeField]private int photosTaken;
+    public int photosTaken;
 
     [SerializeField] private GameObject comeBackUI;
     void Start()

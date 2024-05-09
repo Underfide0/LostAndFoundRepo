@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Cameras")]
     [SerializeField] private GameObject Camera;
+    [SerializeField] private PhotoManager photoManager;
+     
 
     [Header("CardBoard")]
     [SerializeField] private GameObject cardBoardTrigger;
@@ -48,6 +50,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private EnemyScript enemyScript;
     [SerializeField] private GameObject enemyHand;
     [SerializeField] private GameObject normalUI;
+    
 
 
     // Start is called before the first frame update
@@ -284,6 +287,10 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Cabin"))
         {
             inCabin = true;
+            if (photoManager.photosTaken == 8)
+            {
+                enemyScript.enemyTP();
+            }
         }
     }
 
@@ -310,6 +317,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Cabin"))
         {
             inCabin = false;
+
         }
     }
 
@@ -373,4 +381,8 @@ public class PlayerController : MonoBehaviour
        // myAnimator.Play("CrazyDeath");
     }
 
+    public void enemyInCabin()
+    {
+
+    }
 }
