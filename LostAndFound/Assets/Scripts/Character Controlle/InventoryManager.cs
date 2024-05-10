@@ -12,12 +12,12 @@ public class InventoryManager : MonoBehaviour
     [Serializable]
     private class Inventory
     {
-        [SerializeField] public Image slot;
+        [SerializeField] public GameObject slot;
         [SerializeField] public int slotID;
         
         [SerializeField] public GameObject objectInGame;
 
-        public Inventory(Image slot, int slotID, GameObject objectInGame)
+        public Inventory(GameObject slot, int slotID, GameObject objectInGame)
         {
             this.slot = slot;
             this.slotID = slotID;
@@ -237,17 +237,17 @@ public class InventoryManager : MonoBehaviour
 
         Object3.SetActive(false);
 
-        Image Slot1 = firstSlot.slot;
+        GameObject Slot1 = firstSlot.slot;
 
-        Image Slot2 = secondSlot.slot;
+        GameObject Slot2 = secondSlot.slot;
 
-        Image Slot3 = thirdSlot.slot;
+        GameObject Slot3 = thirdSlot.slot;
 
-        Slot1.color = Color.white;
+        Slot1.SetActive(true);
 
-        Slot2.color = Color.black;
+        Slot2.SetActive(false);
 
-        Slot3.color = Color.black;
+        Slot3.SetActive(false); 
 
         timer = 0;
 
@@ -281,17 +281,17 @@ public class InventoryManager : MonoBehaviour
 
         Object3.SetActive(false);
 
-        Image Slot1 = firstSlot.slot;
+        GameObject Slot1 = firstSlot.slot;
 
-        Image Slot2 = secondSlot.slot;
+        GameObject Slot2 = secondSlot.slot;
 
-        Image Slot3 = thirdSlot.slot;
+        GameObject Slot3 = thirdSlot.slot;
 
-        Slot1.color = Color.black;
+        Slot1.SetActive(false);
 
-        Slot2.color = Color.white;
+        Slot2.SetActive(true);
 
-        Slot3.color = Color.black;
+        Slot3.SetActive(false);
 
         timer = 0;
 
@@ -322,17 +322,17 @@ public class InventoryManager : MonoBehaviour
 
         Object3.SetActive(true);
 
-        Image Slot1 = firstSlot.slot;
+        GameObject Slot1 = firstSlot.slot;
 
-        Image Slot2 = secondSlot.slot;
+        GameObject Slot2 = secondSlot.slot;
 
-        Image Slot3 = thirdSlot.slot;
+        GameObject Slot3 = thirdSlot.slot;
 
-        Slot1.color = Color.black;
+        Slot1.SetActive(false);
 
-        Slot2.color = Color.black;
+        Slot2.SetActive(false);
 
-        Slot3.color = Color.white;
+        Slot3.SetActive(true);
 
         timer = 0;
 
@@ -366,17 +366,17 @@ public class InventoryManager : MonoBehaviour
 
         Object3.SetActive(false);
 
-        Image Slot1 = firstSlot.slot;
+        GameObject Slot1 = firstSlot.slot;
 
-        Image Slot2 = secondSlot.slot;
+        GameObject Slot2 = secondSlot.slot;
 
-        Image Slot3 = thirdSlot.slot;
+        GameObject Slot3 = thirdSlot.slot;
 
-        Slot1.color = Color.black;
+        Slot1.SetActive(false);
 
-        Slot2.color = Color.black;
+        Slot2.SetActive(false);
 
-        Slot3.color = Color.black;
+        Slot3.SetActive(false);
 
         timer = 0;
 

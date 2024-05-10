@@ -58,7 +58,7 @@ public class EnemyScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Cabin"))
+        if (other.gameObject.CompareTag("Cabin"))
         {
             enemyInCabin = true;
             comebackUI.SetActive(false);
