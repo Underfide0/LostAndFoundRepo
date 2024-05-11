@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float gravity = 30.0f;
     [Header("---Player booleans---")]
 
-    bool isMovementPressed;
+    [SerializeField] bool isMovementPressed;
     bool isGrounded;
     bool canSprint;
     bool canJump =true;
@@ -137,19 +137,23 @@ public class PlayerMovement : MonoBehaviour
         
         moveVector.y = moveDirectionY;
 
-        isMovementPressed = moveVector.x !=0f || moveVector.y !=0f;
+        isMovementPressed = Inputs().x !=0f || Inputs().y !=0f;
+
+        if (isMovementPressed)
+        {
+            isWalking = true;
+        }
+        else { isWalking = false; }
     }
 
     private void AnimationChanger()
     {
 
-        isWalking = myAnimator.GetBool("isWalking");
-
-        if (isMovementPressed && !isWalking)
+        if (isWalking)
         {
             myAnimator.SetBool("isWalking", true);
         }
-        else if (!isMovementPressed && isWalking)
+        else if (!isWalking)
         {
             myAnimator.SetBool("isWalking", false);
         }

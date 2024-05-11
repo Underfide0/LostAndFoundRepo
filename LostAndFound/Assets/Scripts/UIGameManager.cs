@@ -37,12 +37,12 @@ public class UIGameManager : MonoBehaviour
     // Update is called once per frame
     private void OnEnable()
     {
-        PlayerMovement.OnStaminaChange += UpdateStamina;
+        newPlayerMovement.OnStaminaChange += UpdateStamina;
     }
 
     private void OnDisable()
     {
-        PlayerMovement.OnStaminaChange -= UpdateStamina;
+        newPlayerMovement.OnStaminaChange -= UpdateStamina;
     }
     private void UpdateStamina(float currentStamina)
     {
