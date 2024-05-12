@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: d1bd5f5ef3b9ee14392578b83b187194
+guid: 99912be05188adf43be455ab47e5e08a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_DecoracionProps
+    second: {fileID: 2100000, guid: 066f1ea5683654740872184418242982, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

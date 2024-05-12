@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: d1bd5f5ef3b9ee14392578b83b187194
+guid: 62f2f1b0152fd7642865f1850f6cc6f3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_CamaYCorcho
+    second: {fileID: 2100000, guid: 94aafcd2b0b8bef4c8e0bc023841f9d9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
