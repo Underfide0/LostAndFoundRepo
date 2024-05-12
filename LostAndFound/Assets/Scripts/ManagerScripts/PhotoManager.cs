@@ -8,22 +8,16 @@ public class PhotoManager : MonoBehaviour
 {
     public Material[] materialToApply;
 
-    public RawImage[] images; 
+    public RawImage[] images;
+
+    public GameObject[] marks;
 
     public int numberPhoto;
 
     public int photosTaken;
 
     [SerializeField] private GameObject comeBackUI;
-    void Start()
-    {
-     
-        
 
-
-    }
-
-    // Update is called once per frame
     
     public void Screenshot()
     {
@@ -46,6 +40,7 @@ public class PhotoManager : MonoBehaviour
                 tex.LoadImage(bytes);
                 materialToApply[numberPhoto].mainTexture = tex;
                 images[numberPhoto].texture = tex;
+                marks[numberPhoto].SetActive(true);
             }
             else
             {

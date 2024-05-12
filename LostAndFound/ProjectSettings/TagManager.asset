@@ -10,6 +10,7 @@ TagManager:
   - Cardboard
   - Enemy
   - Cabin
+  - Mesa
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Cardboard
   - Player
   - Ground
-  - 
+  - Table
   - 
   - 
   - 

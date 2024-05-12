@@ -152,13 +152,13 @@ public class InventoryManager : MonoBehaviour
             cardBoardManager.noteNumber = hit.transform.gameObject.GetComponent<PhotoScript>().ID;
             hit.transform.gameObject.GetComponent<PhotoScript>().photoCollider.enabled = false;
             mySanityMeter.RecoverSanity();
+            photoTakenAnimator.Play("photoTaken");
 
             if (myAnimator.GetBool("CameraMode"))
             {
                 cardBoardManager.spawnNote();
                 photoManager.Screenshot();
                 myAnimator.SetBool("CameraMode", false);
-                photoTakenAnimator.Play("photoTaken");
             }
         }
         

@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     private Collider myCollider;
     [SerializeField] private float maxDistance;
     [SerializeField] private GameObject InteractableUI;
-    private PlayerMovement playerMovement;
+    private newPlayerMovement playerMovement;
     [SerializeField] private Animator myAnimator;
     private InventoryManager inventoryManager;
     [SerializeField] private SanityMeter mySanityMeter;
@@ -41,6 +41,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject cardboardUI;
     [SerializeField] private GameObject closeButton;
 
+    [Header("Mesa")]
+    [SerializeField] private bool insideTable;
+    [SerializeField] private GameObject tableUI;
+    [SerializeField] GameObject backTable;
+    [SerializeField] private LayerMask tableLayer;
+    [SerializeField] private GameObject exclamationNote;
+
     [Header("OptionsMenu")]
     private bool isPaused;
     
@@ -60,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
         playerInput = GetComponent<PlayerInput>();
 
-        playerMovement = GetComponent<PlayerMovement>();
+        playerMovement = GetComponent<newPlayerMovement>();
 
         playerInput.actions["Pause"].started += PauseMenuManager_started;
 
@@ -119,6 +126,14 @@ public class PlayerController : MonoBehaviour
             if (insideCardboard)
             {
                 cardboardInteract();
+            }
+        }
+
+        if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, maxDistance, tableLayer))
+        {
+            if (insideTable)
+            {
+                tableInteract();
             }
         }
     }
@@ -260,6 +275,18 @@ public class PlayerController : MonoBehaviour
                 InteractableUI.SetActive(false);
             }
         }
+
+        if (insideTable)
+        {
+            if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, maxDistance, tableLayer))
+            {
+                InteractableUI.SetActive(true);
+            }
+            else
+            {
+                InteractableUI.SetActive(false);
+            }
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -293,6 +320,11 @@ public class PlayerController : MonoBehaviour
                 vallaEndGame.SetActive(false);
             }
         }
+
+        if (other.CompareTag("Mesa"))
+        {
+            insideTable = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -320,12 +352,29 @@ public class PlayerController : MonoBehaviour
             inCabin = false;
 
         }
+
+        if (other.CompareTag("Mesa"))
+        {
+            insideTable = false;
+        }
+
     }
 
     private void cardboardInteract()
     {
         InteractableUI.SetActive(false);
         cardboardUI.SetActive(true);
+        Time.timeScale = 0;
+        Camera.GetComponent<FirstPersonCamera>().enabled = false;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
+        EventSystem.current.SetSelectedGameObject(closeButton);
+    }
+
+    private void tableInteract()
+    {
+        InteractableUI.SetActive(false);
+        tableUI.SetActive(true);
         Time.timeScale = 0;
         Camera.GetComponent<FirstPersonCamera>().enabled = false;
         Cursor.visible = true;
@@ -380,5 +429,15 @@ public class PlayerController : MonoBehaviour
         normalUI.SetActive(false);
         inventoryManager.deactivateAllGO();
        // myAnimator.Play("CrazyDeath");
+    }
+
+    public void closeNoteUI()
+    {
+        tableUI.SetActive(false);
+        Time.timeScale = 1;
+        Camera.GetComponent<FirstPersonCamera>().enabled = true;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        exclamationNote.SetActive(false);
     }
 }
