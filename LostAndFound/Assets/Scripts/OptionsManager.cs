@@ -8,16 +8,7 @@ using UnityEngine.EventSystems;
 public class OptionsManager : MonoBehaviour
 {
     public Slider musicSlider, sfxSlider, brightnessSlider;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
     private void Awake()
     {
       

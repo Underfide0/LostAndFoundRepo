@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5bfe8ca8d13927d479eefa9b4bc4ab17
+guid: 665184fc237d1044bb76f0396acfe4fa
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: valla
-    second: {fileID: 2100000, guid: 80dead82423559349ae789ea6e1478f4, type: 2}
+      name: M_Cross
+    second: {fileID: 2100000, guid: 600e0b25d4fb935499b75f9d35ae5410, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
