@@ -12,6 +12,8 @@ public class PhotoManager : MonoBehaviour
 
     public GameObject[] marks;
 
+    public GameObject[] hangedPhotos;   
+
     public int numberPhoto;
 
     public int photosTaken;
@@ -41,6 +43,7 @@ public class PhotoManager : MonoBehaviour
                 materialToApply[numberPhoto].mainTexture = tex;
                 images[numberPhoto].texture = tex;
                 marks[numberPhoto].SetActive(true);
+                hangedPhotos[numberPhoto].SetActive(true);
             }
             else
             {

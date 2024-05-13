@@ -45,6 +45,8 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private SanityMeter mySanityMeter;
 
     private Animator myAnimator;
+
+    [SerializeField] private Animator objetivoAnimator;
     [Header("CAMERA")]
     [SerializeField] private GameObject CinemachineCameraPrincipal;
 
@@ -63,9 +65,15 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private Animator photoTakenAnimator;
 
     [SerializeField] private LayerMask photoLayerMask;
+
     [Header("---FlashLight---")]
     public bool flashlightOn;
     [SerializeField] private GameObject FlashLightGO;
+
+    [Header("---Map---")]
+    [SerializeField] private Animator mapAnimator;
+    
+
     private float inventoryInputs()
     {
         InventoryInput = playerInput.actions["Inventory"].ReadValue<float>();
@@ -257,6 +265,7 @@ public class InventoryManager : MonoBehaviour
 
         notePad.SetActive(false);
 
+        mapAnimator.SetBool("isOpen", false);
     }
 
     public void Slot2F()
@@ -298,6 +307,8 @@ public class InventoryManager : MonoBehaviour
         notePad.SetActive(false);
 
         FlashLightOff();
+
+        mapAnimator.SetBool("isOpen", false);
     }
 
     public void Slot3F()
@@ -343,6 +354,8 @@ public class InventoryManager : MonoBehaviour
         FlashLightOff();
 
         notePad.SetActive(false);
+
+        mapAnimator.SetBool("isOpen", true);
     }
     public void OptionsF()
     {
@@ -387,6 +400,8 @@ public class InventoryManager : MonoBehaviour
         FlashLightOff();
 
         notePad.SetActive(true);
+
+        mapAnimator.SetBool("isOpen", false);
     }
 
     public void CameraActivation()
@@ -442,4 +457,10 @@ public class InventoryManager : MonoBehaviour
         Object3.SetActive(false);
     }
     
+    public void changeSlotAnimation()
+    {
+        objetivoAnimator.Play("ChangeSlot");
+    }
+
+   
 }
