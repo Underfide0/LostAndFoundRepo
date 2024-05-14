@@ -33,7 +33,7 @@ public class UIManager : MonoBehaviour
     }
     public void loadGame()
     {
-        SceneManager.LoadScene("UlisesScene");
+        SceneManager.LoadScene(sceneBuildIndex:1);
     }
 
     public void quitGame()

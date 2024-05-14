@@ -32,7 +32,7 @@ public class OptionsManager : MonoBehaviour
     
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(sceneBuildIndex:2);
     }
 
     public void resolutionDropdown(int index)
