@@ -72,7 +72,7 @@ public class InventoryManager : MonoBehaviour
 
     [Header("---Map---")]
     [SerializeField] private Animator mapAnimator;
-    [SerializeField] private GameObject Marks;
+    
     
 
     private float inventoryInputs()

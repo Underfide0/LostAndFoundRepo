@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private InventoryManager inventoryManager;
     [SerializeField] private SanityMeter mySanityMeter;
     public bool inCabin;
+    [SerializeField] private bool canWin;
 
     [Header("CAR")]
     [SerializeField] private GameObject car;
@@ -57,7 +58,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private EnemyScript enemyScript;
     [SerializeField] private GameObject enemyHand;
     [SerializeField] private GameObject normalUI;
-    [SerializeField] private GameObject vallaEndGame;
+
+    [Header("AnimatorWinDeath")]
+    [SerializeField] private Animator deathAnimator;
+    [SerializeField] private Animator winAnimator;
+    [SerializeField] private GameObject deathPanel;
+    [SerializeField] private GameObject winPanel;
+
 
 
     // Start is called before the first frame update
@@ -188,6 +195,7 @@ public class PlayerController : MonoBehaviour
             Camera.GetComponent<FirstPersonCameraCar>().enabled = true;
             transform.localRotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
             car.transform.rotation = Quaternion.Euler(0, car.transform.eulerAngles.y, 0);
+            checkWin();
     }
 
     private void enterCarCopilot()
@@ -204,6 +212,7 @@ public class PlayerController : MonoBehaviour
         Camera.GetComponent<FirstPersonCameraCar>().enabled = true;
         transform.localRotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
         car.transform.rotation= Quaternion.Euler(0, car.transform.eulerAngles.y, 0);
+        checkWin();
     }
 
     private void exitCarCopilot()
@@ -317,7 +326,8 @@ public class PlayerController : MonoBehaviour
             if (photoManager.photosTaken == 8)
             {
                 enemyScript.enemyTP();
-                vallaEndGame.SetActive(false);
+                
+                canWin = true;
             }
         }
 
@@ -418,6 +428,8 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector3(0, 0, 0);
         normalUI.SetActive(false);
         inventoryManager.deactivateAllGO();
+        deathPanel.SetActive(true);
+        deathAnimator.Play("deathPanelAnimation");
     }
 
     public void DeathbySanity()
@@ -428,7 +440,8 @@ public class PlayerController : MonoBehaviour
         Camera.GetComponent<FirstPersonCameraCar>().enabled = false;
         normalUI.SetActive(false);
         inventoryManager.deactivateAllGO();
-       // myAnimator.Play("CrazyDeath");
+        deathPanel.SetActive(true);
+        deathAnimator.Play("deathPanelAnimation");       
     }
 
     public void closeNoteUI()
@@ -439,5 +452,14 @@ public class PlayerController : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         exclamationNote.SetActive(false);
+    }
+
+    public void checkWin()
+    {
+        if (canWin)
+        {
+            winPanel.SetActive(true);
+            winAnimator.Play("winPanelAnimation");
+        }
     }
 }
