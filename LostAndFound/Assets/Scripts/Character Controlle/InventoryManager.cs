@@ -458,8 +458,4 @@ public class InventoryManager : MonoBehaviour
         Object3.SetActive(false);
     }
     
-    public void changeSlotAnimation()
-    {
-        objetivoAnimator.Play("ChangeSlot");
-    }
 }

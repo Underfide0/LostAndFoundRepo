@@ -60,5 +60,5 @@ Material:
     m_Colors:
     - _alpha: {r: 0, g: 0, b: 0, a: 0.01960784}
     - _color_base: {r: 0.3632075, g: 0.6424404, b: 1, a: 0}
-    - _rippple_color: {r: 0.481132, g: 1.263579, b: 2, a: 0}
+    - _rippple_color: {r: 0.23633595, g: 0.6222396, b: 0.9824162, a: 0}
   m_BuildTextureStacks: []

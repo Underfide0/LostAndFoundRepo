@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4265a041954897941afec871c608473b, type: 3}
   m_Name: Crt
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   scanlinesWeight:
     m_OverrideState: 1
     m_Value: 1
@@ -169,10 +169,10 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 0}
   fogNear:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   fogFar:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 81.3
   fogAltScale:
     m_OverrideState: 0
