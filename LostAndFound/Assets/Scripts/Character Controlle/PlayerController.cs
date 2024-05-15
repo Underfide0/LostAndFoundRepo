@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform insideCar, outsideCar;
     [SerializeField] Transform insideCarCopilot, outsideCarCopilot;
     [SerializeField] private LayerMask carLayer;
+    
 
     [Header("Cameras")]
     [SerializeField] private GameObject Camera;
@@ -196,6 +197,7 @@ public class PlayerController : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
             car.transform.rotation = Quaternion.Euler(0, car.transform.eulerAngles.y, 0);
             checkWin();
+            myAnimator.SetBool("insideCar", true);
     }
 
     private void enterCarCopilot()
@@ -213,6 +215,7 @@ public class PlayerController : MonoBehaviour
         transform.localRotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
         car.transform.rotation= Quaternion.Euler(0, car.transform.eulerAngles.y, 0);
         checkWin();
+        myAnimator.SetBool("insideCar", true);
     }
 
     private void exitCarCopilot()
@@ -227,6 +230,7 @@ public class PlayerController : MonoBehaviour
         Camera.GetComponent<FirstPersonCameraCar>().enabled = false;
         transform.localRotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
         car.transform.localRotation = Quaternion.Euler(0, car.transform.eulerAngles.y, 0);
+        myAnimator.SetBool("insideCar", false);
     }
     private void exitCar()
     {
@@ -241,6 +245,7 @@ public class PlayerController : MonoBehaviour
             Camera.GetComponent<FirstPersonCameraCar>().enabled = false;
             transform.localRotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
             car.transform.localRotation = Quaternion.Euler(0, car.transform.eulerAngles.y, 0);
+            myAnimator.SetBool("insideCar", false);
     }
 
     private void RaycastChecker()
