@@ -5,6 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/FloridaReplay.unity
+    guid: 2d98ca839592a894981afb214879baf3
+  - enabled: 1
+    path: Assets/Scenes/MiguelAScene.unity
+    guid: 3dec716b742958848b7af97a89a94492
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: b892d066fb5bf774da5c81e5911936c4

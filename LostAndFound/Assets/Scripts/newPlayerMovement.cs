@@ -12,9 +12,11 @@ public class newPlayerMovement : MonoBehaviour
     private PlayerInput playerInput;
     public float speed,speedRun, maxForce;
     private Vector2 move;
+    private Vector3 moveVector;
 
     bool canSprint;
     [SerializeField] private bool isRunning;
+    [SerializeField] private bool isWalking;
 
     private Animator myAnimator;
     [Header("---Player Satmina---")]
@@ -27,6 +29,15 @@ public class newPlayerMovement : MonoBehaviour
     private float currentStamina;
     private Coroutine regeneratingStamina;
     public static Action<float> OnStaminaChange;
+
+    [Header("---Player Headbob---")]
+    [SerializeField] private float walkBobSpeed = 14f;
+    [SerializeField] private float walkBobAmount = 0.05f;
+    [SerializeField] private float sprintBobSpeed = 18f;
+    [SerializeField] private float sprintBobAmount = 0.11f;
+    private float defaultYpos = 0;
+    private float timer;
+    [SerializeField] private GameObject playerCamera;
 
 
 
@@ -47,6 +58,7 @@ public class newPlayerMovement : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         playerInput = GetComponent<PlayerInput>();
         myRigidbody = GetComponent<Rigidbody>();
+        defaultYpos = playerCamera.transform.localPosition.y;
     }
     private void PlayerMovement_Run(InputAction.CallbackContext obj)
     {
@@ -84,10 +96,15 @@ public class newPlayerMovement : MonoBehaviour
         }
 
         animationCheck();
+
+        handleHeadBob();
     }
 
     void Move()
     {
+
+        moveVector = (transform.TransformDirection(Vector3.forward) * move.x) + (transform.TransformDirection(Vector3.right) * move.y);
+
         Vector3 currentVelocity = myRigidbody.velocity;
 
         Vector3 targetVelocity = new Vector3(move.x, 0, move.y);
@@ -111,16 +128,19 @@ public class newPlayerMovement : MonoBehaviour
         {
             myAnimator.SetBool("isWalking", false);
             myAnimator.SetBool("isRunning", false);
+            isWalking = false;
         }
         else
         {
             if (isRunning)
             {
                 myAnimator.SetBool("isRunning", true);
+                isWalking = false;
             }
             else
             {
                 myAnimator.SetBool("isWalking", true);
+                isWalking = true;
             }
         }
 
@@ -183,5 +203,17 @@ public class newPlayerMovement : MonoBehaviour
         }
 
         regeneratingStamina = null;
+    }
+
+    private void handleHeadBob()
+    {
+        if (Mathf.Abs(moveVector.x) > 0.1f || Mathf.Abs(moveVector.z) > 0.1f)
+        {
+            timer += Time.deltaTime * (isWalking ? walkBobSpeed : sprintBobSpeed);
+            playerCamera.transform.localPosition = new Vector3(
+                playerCamera.transform.localPosition.x,
+                defaultYpos + Mathf.Sin(timer) * (isWalking ? walkBobAmount : sprintBobAmount)
+                , playerCamera.transform.localPosition.z);
+        }
     }
 }

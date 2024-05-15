@@ -33,7 +33,17 @@ public class UIManager : MonoBehaviour
     }
     public void loadGame()
     {
-        SceneManager.LoadScene(sceneBuildIndex:1);
+        SceneManager.LoadScene(3);
+    }
+
+    public void loadMenu()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void loadCutscene()
+    {
+        SceneManager.LoadScene(1);
     }
 
     public void quitGame()
