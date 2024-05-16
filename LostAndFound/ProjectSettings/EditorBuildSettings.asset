@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/FloridaReplay.unity
     guid: 19613e04fdff72b45b4c2d0027781acb
   - enabled: 1

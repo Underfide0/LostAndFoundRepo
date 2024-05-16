@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private SanityMeter mySanityMeter;
     public bool inCabin;
     [SerializeField] private bool canWin;
+    [SerializeField] private Rigidbody myRigidbody;
 
     [Header("CAR")]
     [SerializeField] private GameObject car;
@@ -29,7 +30,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform insideCar, outsideCar;
     [SerializeField] Transform insideCarCopilot, outsideCarCopilot;
     [SerializeField] private LayerMask carLayer;
-    
+    public LayerMask groundLayer;
 
     [Header("Cameras")]
     [SerializeField] private GameObject Camera;
@@ -79,7 +80,7 @@ public class PlayerController : MonoBehaviour
 
         playerInput.actions["Pause"].started += PauseMenuManager_started;
 
-       
+        AudioManager.instance.PlayMusic("GameTheme");
     }
 
     private void PauseMenuManager_started(InputAction.CallbackContext obj)
@@ -231,6 +232,8 @@ public class PlayerController : MonoBehaviour
         transform.localRotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
         car.transform.localRotation = Quaternion.Euler(0, car.transform.eulerAngles.y, 0);
         myAnimator.SetBool("insideCar", false);
+        myRigidbody.velocity = Vector3.zero;
+        RayCastExitCar();
     }
     private void exitCar()
     {
@@ -246,6 +249,8 @@ public class PlayerController : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
             car.transform.localRotation = Quaternion.Euler(0, car.transform.eulerAngles.y, 0);
             myAnimator.SetBool("insideCar", false);
+            myRigidbody.velocity = Vector3.zero;
+            RayCastExitCar();
     }
 
     private void RaycastChecker()
@@ -435,6 +440,7 @@ public class PlayerController : MonoBehaviour
         inventoryManager.deactivateAllGO();
         deathPanel.SetActive(true);
         deathAnimator.Play("deathPanelAnimation");
+        AudioManager.instance.PlaySFX("GameOver");
     }
 
     public void DeathbySanity()
@@ -446,7 +452,8 @@ public class PlayerController : MonoBehaviour
         normalUI.SetActive(false);
         inventoryManager.deactivateAllGO();
         deathPanel.SetActive(true);
-        deathAnimator.Play("deathPanelAnimation");       
+        deathAnimator.Play("deathPanelAnimation");
+        AudioManager.instance.PlaySFX("GameOver");
     }
 
     public void closeNoteUI()
@@ -459,6 +466,28 @@ public class PlayerController : MonoBehaviour
         exclamationNote.SetActive(false);
     }
 
+    public void RayCastExitCar()
+    {
+        Vector3 origin = transform.position;
+        RaycastHit[] hits = Physics.RaycastAll(origin, Vector3.up, 100f, groundLayer);
+
+        if (hits.Length > 0)
+        {
+            RaycastHit closestHit = hits[0];
+            foreach (RaycastHit hit in hits)
+            {
+                if (hit.distance < closestHit.distance)
+                {
+                    closestHit = hit;
+                }
+            }
+
+            
+            transform.position = closestHit.point + Vector3.up * 2;
+           
+        }
+    }
+
     public void checkWin()
     {
         if (canWin)
@@ -466,5 +495,18 @@ public class PlayerController : MonoBehaviour
             winPanel.SetActive(true);
             winAnimator.Play("winPanelAnimation");
         }
+    }
+
+    public void walkSound()
+    {
+        if (inCabin)
+        {
+            AudioManager.instance.PlaySFX("woodFootsteps");
+        }
+        else
+        {
+            AudioManager.instance.PlaySFX("Grass_footsteps");
+        }
+        
     }
 }

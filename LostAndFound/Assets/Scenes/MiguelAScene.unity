@@ -1589,10 +1589,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraM: {fileID: 0}
-  mainMenuFirst: {fileID: 0}
-  settingsMenuFirst: {fileID: 0}
-  exitMenuFirst: {fileID: 0}
-  creditsMenuFirst: {fileID: 0}
 --- !u!1 &889778381
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,7 +2210,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999577297}
-  m_LocalRotation: {x: 0.018144079, y: -0.015128896, z: 0.00027457648, w: 0.99972093}
+  m_LocalRotation: {x: 0.018144133, y: -0.0151280165, z: 0.0002745618, w: 0.99972093}
   m_LocalPosition: {x: 0.3, y: 0.36, z: -9.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2391,6 +2387,7 @@ RectTransform:
   - {fileID: 918475901}
   - {fileID: 986450856}
   - {fileID: 704373237}
+  - {fileID: 1403687627}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2496,10 +2493,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraM: {fileID: 0}
-  mainMenuFirst: {fileID: 0}
-  settingsMenuFirst: {fileID: 0}
-  exitMenuFirst: {fileID: 0}
-  creditsMenuFirst: {fileID: 0}
 --- !u!1 &1146811629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2881,6 +2874,82 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387479079}
   m_Mesh: {fileID: -4801637421188382105, guid: 1a3acca14a6f7e74282e0946141c33c5, type: 3}
+--- !u!1 &1403687626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403687627}
+  - component: {fileID: 1403687629}
+  - component: {fileID: 1403687628}
+  m_Layer: 5
+  m_Name: FUndido Princpio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1403687627
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403687626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1092565431}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1403687628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403687626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1403687629
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403687626}
+  m_CullTransparentMesh: 1
 --- !u!1 &1415409081
 GameObject:
   m_ObjectHideFlags: 0
@@ -3251,8 +3320,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552417288}
-  m_LocalRotation: {x: 0.01797626, y: 0.13649715, z: -0.0024773064, w: 0.9904743}
-  m_LocalPosition: {x: -85.68172, y: 0.27999997, z: 624.455}
+  m_LocalRotation: {x: 0.017982919, y: 0.13383015, z: -0.0024289093, w: 0.99083817}
+  m_LocalPosition: {x: -277.63028, y: 0.27999997, z: -380.55927}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

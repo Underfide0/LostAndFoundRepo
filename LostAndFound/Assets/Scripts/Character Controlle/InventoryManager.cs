@@ -115,11 +115,13 @@ public class InventoryManager : MonoBehaviour
         if (currentSlot == 1 && flashlightOn == false && !playerController.isDriving && !playerController.isCopiling)
         {
             FlashLightOn();
+            AudioManager.instance.PlaySFX("flashlight");
             return;
         }
         if (currentSlot == 1 && flashlightOn == true)
         {
             FlashLightOff();
+            AudioManager.instance.PlaySFX("flashlight");
             return;
         }
         
@@ -162,6 +164,7 @@ public class InventoryManager : MonoBehaviour
             hit.transform.gameObject.GetComponent<PhotoScript>().photoCollider.enabled = false;
             mySanityMeter.RecoverSanity();
             photoTakenAnimator.Play("photoTaken");
+            AudioManager.instance.PlaySFX("Cam");
 
             if (myAnimator.GetBool("CameraMode"))
             {
@@ -357,6 +360,9 @@ public class InventoryManager : MonoBehaviour
         notePad.SetActive(false);
 
         mapAnimator.SetBool("isOpen", true);
+
+        AudioManager.instance.PlaySFX("Map");
+
     }
     public void OptionsF()
     {
@@ -403,6 +409,8 @@ public class InventoryManager : MonoBehaviour
         notePad.SetActive(true);
 
         mapAnimator.SetBool("isOpen", false);
+
+        AudioManager.instance.PlaySFX("button menu");
     }
 
     public void CameraActivation()

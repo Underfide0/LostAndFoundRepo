@@ -9,18 +9,13 @@ using UnityEngine.EventSystems;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera cameraM;
-    [SerializeField] private GameObject mainMenuFirst;
-    [SerializeField] private GameObject settingsMenuFirst;
-    [SerializeField] private GameObject exitMenuFirst;
-    [SerializeField] private GameObject creditsMenuFirst;
-
-
-
-
+    
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1.0f;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
     }
     public void currentMenu(GameObject menu)
     {
