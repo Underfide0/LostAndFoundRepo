@@ -20,7 +20,11 @@ public class PhotoManager : MonoBehaviour
 
     [SerializeField] private GameObject comeBackUI;
 
-    
+    [SerializeField] private GameObject cabinaBien;
+
+    [SerializeField] private GameObject cabinaMal;
+
+
     public void Screenshot()
     {
         
@@ -55,6 +59,9 @@ public class PhotoManager : MonoBehaviour
         if (photosTaken == materialToApply.Length)
         { 
             comeBackUI.SetActive(true);
+
+            cabinaBien.SetActive(false);
+            cabinaMal.SetActive(true);
         }
 
         Debug.Log("phototaken");

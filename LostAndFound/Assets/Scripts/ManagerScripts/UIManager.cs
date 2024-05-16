@@ -14,10 +14,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject exitMenuFirst;
     [SerializeField] private GameObject creditsMenuFirst;
 
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Time.timeScale = 1.0f;
     }
     public void currentMenu(GameObject menu)
     {
@@ -25,25 +28,28 @@ public class UIManager : MonoBehaviour
     }
     public void activateCamera(CinemachineVirtualCamera target)
     {
-        target.gameObject.SetActive(true);
+        //target.gameObject.SetActive(true);
+
+        target.Priority= 15;
     }
     public void deactivateCamera(CinemachineVirtualCamera target)
     {
-        target.gameObject.SetActive(false);
+        target.Priority = 10;
+        //target.gameObject.SetActive(false);
     }
     public void loadGame()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("UlisesScene");
     }
 
     public void loadMenu()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void loadCutscene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("MiguelAScene");
     }
 
     public void quitGame()

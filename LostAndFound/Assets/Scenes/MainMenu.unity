@@ -5664,7 +5664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1078488458
 Transform:
   m_ObjectHideFlags: 0
@@ -7659,7 +7659,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 11
+  m_Priority: 15
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 1646168094}
   m_Follow: {fileID: 0}
@@ -9049,7 +9049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1741503410
 Transform:
   m_ObjectHideFlags: 0
@@ -9082,7 +9082,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 9
+  m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 1728385124}
   m_Follow: {fileID: 0}
@@ -9579,7 +9579,7 @@ MonoBehaviour:
         m_MethodName: deactivateCamera
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1741503411}
+          m_ObjectArgument: {fileID: 1965643957}
           m_ObjectArgumentAssemblyTypeName: Cinemachine.CinemachineVirtualCamera,
             Cinemachine
           m_IntArgument: 0
@@ -10257,7 +10257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1965643956
 Transform:
   m_ObjectHideFlags: 0
@@ -10290,7 +10290,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 9
+  m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 1584164450}
   m_Follow: {fileID: 0}
