@@ -83,6 +83,7 @@ public class newPlayerMovement : MonoBehaviour
         else if (!isRunning)
         {
             speed = 4f;
+            
         }
 
         if (useStamina)
@@ -141,6 +142,9 @@ public class newPlayerMovement : MonoBehaviour
             {
                 myAnimator.SetBool("isWalking", true);
                 isWalking = true;
+
+                myAnimator.SetBool("isRunning", false);
+                isRunning = false;
             }
         }
 

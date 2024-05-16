@@ -109,11 +109,8 @@ public class CarController : MonoBehaviour
             _colliderBL.brakeTorque = 0;
             _colliderBR.brakeTorque = 0;
         }
-        
-         
-        
 
-        SteeringWheel.transform.localRotation = Quaternion.Euler(0,0, Input.GetAxis("Horizontal") * 35);
+        SteeringWheel.transform.localRotation = Quaternion.Euler(Input.GetAxis("Horizontal") * 35, 90, 0);
 
         
         if (Inputs().y == 0)

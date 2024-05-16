@@ -16,7 +16,7 @@ public class CarStopper : MonoBehaviour
     [Header("---EXTRAS---")]
 
     private int slowBrake = 600;
-   
+    [SerializeField] private GameObject car;
 
     private void Update()
     {
@@ -26,5 +26,6 @@ public class CarStopper : MonoBehaviour
     {
         _colliderBL.brakeTorque += slowBrake;
         _colliderBR.brakeTorque = slowBrake;
+        car.transform.rotation = Quaternion.Euler(0, car.transform.eulerAngles.y, 0);
     }
 }
