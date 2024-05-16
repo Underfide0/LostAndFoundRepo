@@ -361,8 +361,17 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 17.083334
+        time: 18.266666
         value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 30.85
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -391,7 +400,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 17.183332
+        time: 18.366667
         value: -118.2
         inSlope: 0
         outSlope: 0
@@ -430,7 +439,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 17.183332
+        time: 18.366667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -568,8 +577,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 22.566668
-        value: -118
+        time: 22.633333
+        value: -196
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -590,6 +599,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+<<<<<<< Updated upstream
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -612,6 +622,48 @@ AnimationClip:
     attribute: m_IsActive
     path: Fundido
     classID: 1
+=======
+        value: -409.84283
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 11.033334
+        value: -320.09
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 30.966667
+        value: -320.09
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 40.266666
+        value: -541.23956
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchoredPosition.y
+    path: Panel
+    classID: 224
+>>>>>>> Stashed changes
     script: {fileID: 0}
     flags: 0
   - serializedVersion: 2
@@ -620,7 +672,11 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+<<<<<<< Updated upstream
         value: 1
+=======
+        value: -819.696
+>>>>>>> Stashed changes
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -628,19 +684,70 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+<<<<<<< Updated upstream
         time: 30.916666
         value: 0
+=======
+        time: 11.033334
+        value: -640.19
+>>>>>>> Stashed changes
         inSlope: 0
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+<<<<<<< Updated upstream
+=======
+      - serializedVersion: 3
+        time: 30.966667
+        value: -640.19
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 40.266666
+        value: -1082.489
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_SizeDelta.y
+    path: Panel
+    classID: 224
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+>>>>>>> Stashed changes
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.r
+<<<<<<< Updated upstream
     path: Fundido
+=======
+    path: Panel
+>>>>>>> Stashed changes
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 0
@@ -650,6 +757,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+<<<<<<< Updated upstream
         value: 1
         inSlope: 0
         outSlope: 0
@@ -659,18 +767,29 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 30.916666
+=======
+>>>>>>> Stashed changes
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
+<<<<<<< Updated upstream
         inWeight: 0.33333334
         outWeight: 0.33333334
+=======
+        inWeight: 0
+        outWeight: 0
+>>>>>>> Stashed changes
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.g
+<<<<<<< Updated upstream
     path: Fundido
+=======
+    path: Panel
+>>>>>>> Stashed changes
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 0
@@ -680,6 +799,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+<<<<<<< Updated upstream
         value: 1
         inSlope: 0
         outSlope: 0
@@ -689,18 +809,28 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 30.916666
+=======
+>>>>>>> Stashed changes
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
+<<<<<<< Updated upstream
         inWeight: 0.33333334
         outWeight: 0.33333334
+=======
+        inWeight: 0
+        outWeight: 0
+>>>>>>> Stashed changes
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.b
+<<<<<<< Updated upstream
     path: Fundido
+=======
+    path: Panel
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 0
@@ -710,7 +840,33 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+        value: 0.7647059
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: Panel
+>>>>>>> Stashed changes
+    classID: 114
+    script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+<<<<<<< Updated upstream
         value: 0.392
+=======
+        value: 79
+>>>>>>> Stashed changes
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -718,6 +874,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+<<<<<<< Updated upstream
         time: 30.95
         value: 0
         inSlope: 0
@@ -729,6 +886,10 @@ AnimationClip:
       - serializedVersion: 3
         time: 45.966667
         value: 1
+=======
+        time: 22.633333
+        value: 91.15
+>>>>>>> Stashed changes
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -738,10 +899,17 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+<<<<<<< Updated upstream
     attribute: m_Color.a
     path: Fundido
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+=======
+    attribute: m_fontSize
+    path: text3
+    classID: 114
+    script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+>>>>>>> Stashed changes
     flags: 0
   - serializedVersion: 2
     curve:
@@ -749,6 +917,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+<<<<<<< Updated upstream
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -781,6 +950,31 @@ AnimationClip:
     path: Image
     classID: 1
     script: {fileID: 0}
+=======
+        value: 79
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 22.633333
+        value: 91.15
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_fontSizeBase
+    path: text3
+    classID: 114
+    script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+>>>>>>> Stashed changes
     flags: 0
   m_PPtrCurves:
   - serializedVersion: 2
@@ -791,6 +985,32 @@ AnimationClip:
     path: 
     classID: 114
     script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: -7575154709320149080, guid: e40997fcf1ae0184aa94a518567429f8,
+        type: 2}
+    - time: 12.833333
+      value: {fileID: -7575154709320149080, guid: e40997fcf1ae0184aa94a518567429f8,
+        type: 2}
+    - time: 47.25
+      value: {fileID: -7575154709320149080, guid: e40997fcf1ae0184aa94a518567429f8,
+        type: 2}
+    attribute: m_sharedMaterial
+    path: text1
+    classID: 114
+    script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 11.9
+      value: {fileID: -7575154709320149080, guid: e40997fcf1ae0184aa94a518567429f8,
+        type: 2}
+    attribute: m_sharedMaterial
+    path: text3
+    classID: 114
+    script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
     flags: 2
   m_SampleRate: 60
   m_WrapMode: 0
@@ -926,15 +1146,24 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
+<<<<<<< Updated upstream
       path: 3900999922
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
+=======
+      path: 1668086795
+      attribute: 538195251
+      script: {fileID: 0}
+      typeID: 224
+      customType: 28
+>>>>>>> Stashed changes
       isPPtrCurve: 0
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
+<<<<<<< Updated upstream
       path: 3900999922
       attribute: 2526845255
       script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -975,6 +1204,30 @@ AnimationClip:
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
+=======
+      path: 1668086795
+      attribute: 38095219
+      script: {fileID: 0}
+      typeID: 224
+      customType: 28
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1760121391
+      attribute: 1226342476
+      script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1760121391
+      attribute: 3714763831
+      script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+      typeID: 114
+>>>>>>> Stashed changes
       customType: 0
       isPPtrCurve: 0
       isIntCurve: 0
@@ -988,8 +1241,66 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
       isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 2263298819
+      attribute: 122495210
+      script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1760121391
+      attribute: 122495210
+      script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1668086795
+      attribute: 2526845255
+      script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1668086795
+      attribute: 4215373228
+      script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1668086795
+      attribute: 2334886179
+      script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1668086795
+      attribute: 304273561
+      script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: 0}
+    - {fileID: -7575154709320149080, guid: e40997fcf1ae0184aa94a518567429f8, type: 2}
+    - {fileID: -7575154709320149080, guid: e40997fcf1ae0184aa94a518567429f8, type: 2}
+    - {fileID: -7575154709320149080, guid: e40997fcf1ae0184aa94a518567429f8, type: 2}
+    - {fileID: -7575154709320149080, guid: e40997fcf1ae0184aa94a518567429f8, type: 2}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -1667,8 +1978,17 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 17.083334
+        time: 18.266666
         value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 30.85
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -1697,7 +2017,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 17.183332
+        time: 18.366667
         value: -118.2
         inSlope: 0
         outSlope: 0
@@ -1736,7 +2056,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 17.183332
+        time: 18.366667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -1874,8 +2194,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 22.566668
-        value: -118
+        time: 22.633333
+        value: -196
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1896,6 +2216,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+<<<<<<< Updated upstream
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -1918,6 +2239,48 @@ AnimationClip:
     attribute: m_IsActive
     path: Fundido
     classID: 1
+=======
+        value: -409.84283
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 11.033334
+        value: -320.09
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 30.966667
+        value: -320.09
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 40.266666
+        value: -541.23956
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchoredPosition.y
+    path: Panel
+    classID: 224
+>>>>>>> Stashed changes
     script: {fileID: 0}
     flags: 0
   - serializedVersion: 2
@@ -1926,7 +2289,11 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+<<<<<<< Updated upstream
         value: 1
+=======
+        value: -819.696
+>>>>>>> Stashed changes
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1934,19 +2301,70 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+<<<<<<< Updated upstream
         time: 30.916666
         value: 0
+=======
+        time: 11.033334
+        value: -640.19
+>>>>>>> Stashed changes
         inSlope: 0
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+<<<<<<< Updated upstream
+=======
+      - serializedVersion: 3
+        time: 30.966667
+        value: -640.19
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 40.266666
+        value: -1082.489
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_SizeDelta.y
+    path: Panel
+    classID: 224
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+>>>>>>> Stashed changes
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.r
+<<<<<<< Updated upstream
     path: Fundido
+=======
+    path: Panel
+>>>>>>> Stashed changes
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 0
@@ -1956,6 +2374,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+<<<<<<< Updated upstream
         value: 1
         inSlope: 0
         outSlope: 0
@@ -1965,18 +2384,29 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 30.916666
+=======
+>>>>>>> Stashed changes
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
+<<<<<<< Updated upstream
         inWeight: 0.33333334
         outWeight: 0.33333334
+=======
+        inWeight: 0
+        outWeight: 0
+>>>>>>> Stashed changes
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.g
+<<<<<<< Updated upstream
     path: Fundido
+=======
+    path: Panel
+>>>>>>> Stashed changes
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 0
@@ -1986,6 +2416,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+<<<<<<< Updated upstream
         value: 1
         inSlope: 0
         outSlope: 0
@@ -1995,18 +2426,29 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 30.916666
+=======
+>>>>>>> Stashed changes
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
+<<<<<<< Updated upstream
         inWeight: 0.33333334
         outWeight: 0.33333334
+=======
+        inWeight: 0
+        outWeight: 0
+>>>>>>> Stashed changes
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.b
+<<<<<<< Updated upstream
     path: Fundido
+=======
+    path: Panel
+>>>>>>> Stashed changes
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 0
@@ -2016,11 +2458,16 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+<<<<<<< Updated upstream
         value: 0.392
+=======
+        value: 0.7647059
+>>>>>>> Stashed changes
         inSlope: 0
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
+<<<<<<< Updated upstream
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
@@ -2041,11 +2488,19 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+=======
+        inWeight: 0
+        outWeight: 0
+>>>>>>> Stashed changes
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
+<<<<<<< Updated upstream
     path: Fundido
+=======
+    path: Panel
+>>>>>>> Stashed changes
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 0
@@ -2055,6 +2510,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+<<<<<<< Updated upstream
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -2087,14 +2543,8 @@ AnimationClip:
     path: Image
     classID: 1
     script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
+=======
+        value: 79
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2102,6 +2552,42 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+        time: 22.633333
+        value: 91.15
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_fontSize
+    path: text3
+    classID: 114
+    script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+>>>>>>> Stashed changes
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+<<<<<<< Updated upstream
+        value: 1
+=======
+        value: 79
+>>>>>>> Stashed changes
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+<<<<<<< Updated upstream
         time: 39.8
         value: 0.31053
         inSlope: 0
@@ -2113,6 +2599,10 @@ AnimationClip:
       - serializedVersion: 3
         time: 45.916668
         value: 2.1194293
+=======
+        time: 22.633333
+        value: 91.15
+>>>>>>> Stashed changes
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2122,6 +2612,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+<<<<<<< Updated upstream
     attribute: m_LocalScale.x
     path: Image
     classID: 224
@@ -2204,6 +2695,12 @@ AnimationClip:
     path: Image
     classID: 224
     script: {fileID: 0}
+=======
+    attribute: m_fontSizeBase
+    path: text3
+    classID: 114
+    script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+>>>>>>> Stashed changes
     flags: 0
   m_EulerEditorCurves:
   - serializedVersion: 2
