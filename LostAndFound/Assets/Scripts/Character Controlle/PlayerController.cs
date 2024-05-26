@@ -199,6 +199,7 @@ public class PlayerController : MonoBehaviour
             car.transform.rotation = Quaternion.Euler(0, car.transform.eulerAngles.y, 0);
             checkWin();
             myAnimator.SetBool("insideCar", true);
+            AudioManager.instance.PlaySFX("CarDoor");
     }
 
     private void enterCarCopilot()
@@ -217,6 +218,7 @@ public class PlayerController : MonoBehaviour
         car.transform.rotation= Quaternion.Euler(0, car.transform.eulerAngles.y, 0);
         checkWin();
         myAnimator.SetBool("insideCar", true);
+        AudioManager.instance.PlaySFX("CarDoor");
     }
 
     private void exitCarCopilot()
@@ -234,6 +236,7 @@ public class PlayerController : MonoBehaviour
         myAnimator.SetBool("insideCar", false);
         myRigidbody.velocity = Vector3.zero;
         RayCastExitCar();
+        AudioManager.instance.PlaySFX("CarDoor");
     }
     private void exitCar()
     {
@@ -251,6 +254,7 @@ public class PlayerController : MonoBehaviour
             myAnimator.SetBool("insideCar", false);
             myRigidbody.velocity = Vector3.zero;
             RayCastExitCar();
+            AudioManager.instance.PlaySFX("CarDoor");
     }
 
     private void RaycastChecker()

@@ -26,9 +26,11 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         PlayMusic("MenuTheme");
+        musicSource.loop = true;
     }
     public void PlayMusic(string name)
     {
+
         Sound s = Array.Find(musicSounds, x => x.name == name);
 
         if (s == null)
@@ -46,7 +48,7 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(string name)
     {
         Sound s = Array.Find(sfxSounds, x => x.name == name);
-
+        
         if (s == null)
         {
             Debug.Log("No has puesto audiop parguela");

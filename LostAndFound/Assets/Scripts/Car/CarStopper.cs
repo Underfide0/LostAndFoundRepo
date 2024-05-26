@@ -18,9 +18,14 @@ public class CarStopper : MonoBehaviour
     private int slowBrake = 600;
     [SerializeField] private GameObject car;
 
+    private void Start()
+    {
+        
+    }
     private void Update()
     {
         naturalBrake();
+        car.transform.rotation = Quaternion.Euler(0, car.transform.eulerAngles.y, 0);
     }
     private void naturalBrake()
     {

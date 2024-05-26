@@ -157,22 +157,22 @@ public class InventoryManager : MonoBehaviour
     private void InventoryManager_TakePhoto(InputAction.CallbackContext obj)
     {
         RaycastHit hit;
-        if (Physics.Raycast(CinemachineCameraSecondary.transform.position, CinemachineCameraSecondary.transform.forward,out hit,maxDistance, photoLayerMask))
+        if (myAnimator.GetBool("CameraMode"))
         {
-            photoManager.numberPhoto = hit.transform.gameObject.GetComponent<PhotoScript>().ID;
-            cardBoardManager.noteNumber = hit.transform.gameObject.GetComponent<PhotoScript>().ID;
-            hit.transform.gameObject.GetComponent<PhotoScript>().photoCollider.enabled = false;
-            mySanityMeter.RecoverSanity();
-            photoTakenAnimator.Play("photoTaken");
-            AudioManager.instance.PlaySFX("Cam");
-
-            if (myAnimator.GetBool("CameraMode"))
+            if (Physics.Raycast(CinemachineCameraSecondary.transform.position, CinemachineCameraSecondary.transform.forward, out hit, maxDistance, photoLayerMask))
             {
+                photoManager.numberPhoto = hit.transform.gameObject.GetComponent<PhotoScript>().ID;
+                cardBoardManager.noteNumber = hit.transform.gameObject.GetComponent<PhotoScript>().ID;
+                hit.transform.gameObject.GetComponent<PhotoScript>().photoCollider.enabled = false;
+                mySanityMeter.RecoverSanity();
+                photoTakenAnimator.Play("photoTaken");
+                AudioManager.instance.PlaySFX("Cam");
                 cardBoardManager.spawnNote();
                 photoManager.Screenshot();
                 myAnimator.SetBool("CameraMode", false);
             }
         }
+        
         
     }
     private void Awake()

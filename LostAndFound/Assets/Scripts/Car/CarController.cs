@@ -116,7 +116,10 @@ public class CarController : MonoBehaviour
         if (Inputs().y == 0)
         {
             naturalBrake();
+            transform.rotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
+
         }
+        
 
         
         if (carRB.velocity.magnitude > maxSpeed)
